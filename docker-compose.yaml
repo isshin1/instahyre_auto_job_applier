@@ -1,0 +1,12 @@
+services:
+  instahyre-playwright-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: instahyre-playwright-bot:local
+    container_name: instahyre-playwright-bot
+    env_file: .env
+    environment:
+      HEADLESS: "true"
+    shm_size: "1g"
+    restart: "no"
